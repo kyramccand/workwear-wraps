@@ -1,6 +1,11 @@
 
 /* Workwear Wraps Stylesheet*/
 
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -24,21 +29,25 @@
       border-radius: 5px;
       border-color: #647D69;
     }
+
 body {
     font-family: 'Georgia', 'Times New Roman', serif;
     line-height: 1.8;
     color: #333;
     background: white;
+    display: flex;
+    flex-direction: column;
 }
 
 .header{
-    background: var(--sage);
+    background: #A1C5AB;
     padding: 1.5rem 3rem;
     position: sticky;
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     border-bottom: 1px solid var(--sandidk);
+    flex-shrink: 0;
     
 }
 .header-container{
@@ -46,6 +55,7 @@ body {
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    background: #A1C5AB;
 }
 
 .navbar {
@@ -56,6 +66,7 @@ body {
     z-index: 1000;
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     border-bottom: 1px solid var(--sandidk);
+    flex-shrink: 0;
 }
 
 .nav-container {
@@ -107,9 +118,73 @@ section:nth-child(even) {
     background: var(--creamish);
 }
 
+section#home {
+    flex: 1;
+    display: flex;
+    padding: 0;
+}
+
 .container {
-    max-width: 1200px;
+    padding-left: 50px;
+    padding-top: 30px;
     margin: 0 auto;
+    background-image: url("https://cdn.thewirecutter.com/wp-content/media/2024/07/firstaidkits-2048px-00278-2x1-1.jpg?width=2048&quality=75&crop=2:1&auto=webp"), linear-gradient(to right, #647D69, #B5E3BF);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+    width: 100%;
+    flex-direction: column;
+}
+
+.container h1 {
+    width: 50%;
+    color: #FFFFFF;
+    font-family: 'IM FELL French Canon', serif;
+    font-size: 36px;
+    font-weight: 400;
+}
+
+.container p {
+    width: 50%;
+    font-size: 16px;
+    display: flex;
+    font-family: 'Inclusive Sans', serif;
+    font-weight: 400;
+    color: #FFFFFF;
+}
+
+.container li {
+    list-style: none;
+}
+
+.container button {
+    margin-top: 25px;
+    background: var(--sage);
+    border: 2px solid var(--sage);
+}
+
+.page-container {
+    background: #E5F4E9;
+    flex: 1;
+}
+
+.page-container h1 {
+    font-family: 'IM FELL French Canon', serif;
+    font-size: 36px;
+    font-weight: 400;
+    color: #000000;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.page-container p {
+    font-size: 16px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-family: 'Inclusive Sans', serif;
+    font-weight: 400;
 }
 
 h2 {
@@ -148,8 +223,9 @@ p {
 }
 
 footer {
-    background: var(--sage);
-    padding: 4rem 2rem 2rem 2rem;
+    width: 100%;
+    background: #A1C5AB;
+    padding: 1.5rem 3rem;
     margin-top: 0;
 }
 
