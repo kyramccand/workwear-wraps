@@ -1,21 +1,240 @@
-header {
-    display: flex;
-    flex-direction: row;
-    position: fixed;
-    margin: 0 0 0 0;
-    justify-content: space-between;
-    align-items: end;
-    background: #ffffff;
-    width: 100%;
-    box-sizing: border-box;
-    padding: 15px;
-}
+
+/* Workwear Wraps Stylesheet*/
+
 html, body {
-    background: rgb(237, 237, 237);
-    box-sizing: border-box;
+    height: 100%;
+    margin: 0;
+}
+
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
+
+:root {
+    /* Site colors */
+    --green: #647D69;        
+    --sage: #A1C5AB;               
+    --drkgreen: #2d3e2e;                 
+    --creamish: #e8e6e1;        
+    --sandidk: #d4d1c9;        
+}
+
+.button {
+      width: 80px;
+      height: 30px;
+      background-color: #647D69;
+      color: white;
+      border-radius: 5px;
+      border-color: #647D69;
+    }
+
+body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    line-height: 1.8;
+    color: #333;
+    background: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.header{
+    background: #A1C5AB;
+    padding: 1.5rem 3rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    border-bottom: 1px solid var(--sandidk);
+    flex-shrink: 0;
+    
+}
+.header-container{
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    background: #A1C5AB;
+}
+
+.navbar {
+    background: white;
+    padding: 1.5rem 3rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    border-bottom: 1px solid var(--sandidk);
+    flex-shrink: 0;
+}
+
+.nav-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--green);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    letter-spacing: 0.5px;
+    font-family: 'Georgia', serif;
+}
+
+.nav-links {
+    display: flex;
+    gap: 3rem;
+    list-style: none;
+}
+
+.nav-links a {
+    color: var(--green);
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+    position: relative;
+    letter-spacing: 0.5px;
+}
+
+.nav-links a:hover {
+    color: var(--dark);
+}
+
+section {
+    padding: 5rem 2rem;
+    background: white;
+}
+
+section:nth-child(even) {
+    background: var(--creamish);
+}
+
+section#home {
+    flex: 1;
+    display: flex;
+    padding: 0;
+}
+
+.container {
+    padding-left: 50px;
+    padding-top: 30px;
+    margin: 0 auto;
+    background-image: url("https://cdn.thewirecutter.com/wp-content/media/2024/07/firstaidkits-2048px-00278-2x1-1.jpg?width=2048&quality=75&crop=2:1&auto=webp"), linear-gradient(to right, #647D69, #B5E3BF);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+    width: 100%;
+    flex-direction: column;
+}
+
+.container h1 {
+    width: 50%;
+    color: #FFFFFF;
+    font-family: 'IM FELL French Canon', serif;
+    font-size: 36px;
+    font-weight: 400;
+}
+
+.container p {
+    width: 50%;
+    font-size: 16px;
+    display: flex;
+    font-family: 'Inclusive Sans', serif;
+    font-weight: 400;
+    color: #FFFFFF;
+}
+
+.container li {
+    list-style: none;
+}
+
+.container button {
+    margin-top: 25px;
+    background: var(--sage);
+    border: 2px solid var(--sage);
+}
+
 .page-container {
-    padding: 100px 0 0 0;
+    background: #E5F4E9;
+    flex: 1;
+}
+
+.page-container h1 {
+    font-family: 'IM FELL French Canon', serif;
+    font-size: 36px;
+    font-weight: 400;
+    color: #000000;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.page-container p {
+    font-size: 16px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-family: 'Inclusive Sans', serif;
+    font-weight: 400;
+}
+
+h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    color: var(--dark);
+    text-align: center;
+    font-weight: 400;
+    letter-spacing: 1px;
+    position: relative;
+    padding-bottom: 1.5rem;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 2px;
+    background: var(--green);
+}
+
+h3 {
+    color: var(--dark);
+    margin-bottom: 1rem;
+    font-weight: 400;
+    font-size: 1.3rem;
+    letter-spacing: 0.5px;
+}
+
+p {
+    color: #555;
+    line-height: 1.8;
+}
+
+footer {
+    width: 100%;
+    background: #A1C5AB;
+    padding: 1.5rem 3rem;
+    margin-top: 0;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1rem 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
 }
