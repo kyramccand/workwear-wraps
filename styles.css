@@ -217,6 +217,7 @@ section#home {
     flex-direction: column;
     background: #ffffff;
     border-radius: 10px;
+    width: 100%;
 }
 
 form {
@@ -298,5 +299,9 @@ footer {
 
     h2 {
         font-size: 1.8rem;
+    }
+
+    .columns {
+        flex-direction: column;
     }
 }
