@@ -1,7 +1,11 @@
+<!doctype html>
 <html>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script   src="https://code.jquery.com/jquery-3.1.1.min.js"   
+	integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   
+	crossorigin="anonymous"></script>
     <title>Workwear Wraps</title>
     <link rel="stylesheet" href="styles.css" />
     <style type="text/css">
@@ -45,6 +49,7 @@
         }
 
     </style>
+    
   </head>
 
   <body>
@@ -120,6 +125,18 @@
     </footer>
   </body>
   <script>
-        reviews = {};
+        
+        reviews = [];
+
+        // loadReviews();
+
+        // function loadReviews() {
+        //     $.get( "./reviews.json", 
+        //         function( data ) {
+        //             console.log('raw data\n'+ data)
+        //             str = JSON.stringify(data);
+        //     })
+        // }
+
   </script>
 </html>
