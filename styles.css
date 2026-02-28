@@ -221,11 +221,17 @@ section#home {
 
 form {
     width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
 }
 
 form label {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     display: block;
+    width: 100%;
+    text-align: left;
 }
 
 form input {
