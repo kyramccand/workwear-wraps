@@ -107,13 +107,13 @@
                 <h2>Write a Review</h2>
                 <form>
                     <label for="name">Name</label>
-                    <input type="text" id="name" name="name">
+                    <input type="text" id="name" name="name" required>
 
                     <label for="rating">Rating</label>
-                    <input type="radio" id="rating1" name="rating" value="1">
+                    <input type="radio" id="rating1" name="rating" value="1" required>
 
                     <label for="description">Description</label>
-                    <input type="text" id="description" name="description">
+                    <input type="text" id="description" name="description" required>
 
                     <input type="submit" value="Submit">
                 </form>
@@ -123,26 +123,6 @@
     <section id="reviews">
         <h2>Customer Testimonials</h2>
         <div id="rating-stats">
-            <div class="stars-container">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="star">
-                    <path fill="currentColor" d="m5.825 21l2.325-7.6L2 9h7.6L12 1l2.4 8H22l-6.15 4.4l2.325 7.6L12 16.3z" />
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="star">
-                    <path fill="currentColor" d="m5.825 21l2.325-7.6L2 9h7.6L12 1l2.4 8H22l-6.15 4.4l2.325 7.6L12 16.3z" />
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="star">
-                    <path fill="currentColor" d="m5.825 21l2.325-7.6L2 9h7.6L12 1l2.4 8H22l-6.15 4.4l2.325 7.6L12 16.3z" />
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="star">
-                    <path fill="currentColor" d="m5.825 21l2.325-7.6L2 9h7.6L12 1l2.4 8H22l-6.15 4.4l2.325 7.6L12 16.3z" />
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="star">
-                    <path fill="currentColor" d="m5.825 21l2.325-7.6L2 9h7.6L12 1l2.4 8H22l-6.15 4.4l2.325 7.6L12 16.3z" />
-                </svg>
-            </div>
-            <p>
-                4.9 rating out of 6 reviews
-            </p>
         </div>
         <div id="reviews-container">
 
@@ -154,10 +134,24 @@
     </footer>
   </body>
   <script>
-        
-        reviews = [];
 
+        reviews = [];
         loadReviews();
+
+        document.querySelector("form").addEventListener("submit", function(e) {
+            e.preventDefault();
+
+            let newReview = {
+                Name: document.getElementById("name").value,
+                Rating: document.querySelector('input[name="rating"]:checked').value,
+                Comment: document.getElementById("description").value,
+                Time: new Date().toLocaleDateString()
+            };
+            
+            reviews.push(newReview);
+            displayReviews();
+            displayStats();
+        });
         
 
         function loadReviews() {
@@ -165,6 +159,7 @@
                 function( data ) {
                     reviews = data;
                     displayReviews();
+                    displayStats();
             })
         }
 
@@ -194,7 +189,7 @@
             let html = "<div class='stars-container'>";
             for (let i = 1; i <= 5; i++) {
                 let starClass = "no-star";
-                if (i <= numStars) {
+                if (i <= Math.round(numStars)) {
                     starClass = "star";
                 }
                 html += "<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' class=" + starClass + ">" +
@@ -204,6 +199,21 @@
             html += "</div>";
             return html;
         } // End of stringOfStars
+
+        function displayStats() {
+            // Get the average rating rounded to 1 decimal point
+            let totalStars = 0;
+            reviews.forEach((review) => totalStars += parseInt(review.Rating));
+            let averageRating = (totalStars/reviews.length).toFixed(1);
+
+            console.log(averageRating);
+            document.getElementById("rating-stats").innerHTML = stringOfStars(averageRating) +
+            "<p>" + averageRating + " rating of " + reviews.length + " reviews";
+        }
+
+        function submitReview() {
+            console.log()
+        }
 
   </script>
 </html>
