@@ -304,4 +304,21 @@ footer {
     .columns {
         flex-direction: column;
     }
+
+    .container h1 {
+        width: 100%;
+    }
+
+    .container p {
+        width: 100%;
+    }
+
+    .container {
+        /* image placeholder */
+        background: #929292;
+        display: flex;
+        padding: 30px;
+        align-items: center;
+    }
+
 }
