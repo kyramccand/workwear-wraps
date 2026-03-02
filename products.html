@@ -42,6 +42,9 @@
         font-size: 13px;
         color: #000000;
       }
+      .kit-text a {
+        align-self: center;
+      }
       .kit-image{
         width: 100%;
         height: 200px;
@@ -94,19 +97,23 @@
       var products = [ 
         {
           name: "Preforming Arts Kit",
-          description: "A kit designed for dancers, musicians and stage crew. This kit contains skin-safe adhesives for every movement, costume change, or instrument."
+          description: "A kit designed for dancers, musicians and stage crew. This kit contains skin-safe adhesives for every movement, costume change, or instrument.",
+          link: "performing-arts.html"
         },
         {
           name: "Sports & Fitness Kit",
-          description: "For athletes and trainers. This kit contains extra-durable, sweat-wicking bandages that can protect though all reps."
+          description: "For athletes and trainers. This kit contains extra-durable, sweat-wicking bandages that can protect though all reps.",
+          link: "sports-fitness.html"
         },
         {
           name: "Medical & Clinical Kit",
-          description: "This kit is designed for patient home-care or in-office work. It provides sterile wound care no matter the place."
+          description: "This kit is designed for patient home-care or in-office work. It provides sterile wound care no matter the place.",
+          link: "medical.html"
         },
         {
           name: "Visual Arts Kit",
-          description: "Designed to survive the abrasive reality of all mix-media studios. This kit contains thin waterproof seals that won’t get in the way."
+          description: "Designed to survive the abrasive reality of all mix-media studios. This kit contains thin waterproof seals that won’t get in the way.",
+          link: "visual-arts.html"
         }
       ];
       var grid = document.getElementById("kit-grid");
@@ -116,10 +123,9 @@
             '<div class="kit-image"></div>' +
             '<div class="kit-text">' +
               '<h3 class="kit-card-title">'+ product.name +'</h3>' +
-              '<p class="kit-description">' + product.description + '</p>' +
-              '<button class="kit-button"></button>'+
-           ' </div>' +
-          '</div>';
+              '<p class="kit-description">' + product.description + '</p>'
+              + '<a href="' + product.link + '"><button class="kit-button"></button></a>' 
+              + ' </div>' + '</div>';
       });
     </script>
 
