@@ -124,6 +124,12 @@ section#home {
   padding: 0;
 }
 
+section#home {
+    flex: 1;
+    display: flex;
+    padding: 0;
+}
+
 .container {
   max-width: 1200px;
   padding-left: 50px;
