@@ -5,7 +5,56 @@
     <title>Workwear Wraps</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
+  <style>
+    
+  .about-container {
+    background: #e5f4e9;
+    flex: 1;
+  }
 
+.about-container h1 {
+  font-family: "Inclusive Sans", serif;
+  font-size: 36px;
+  font-weight: 400;
+  color: #000000;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.about-container p{
+  color:#647d69;
+  font-size: 20px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-family: "Inclusive Sans", serif;
+  font-weight: 400;
+  letter-spacing: 0px;
+  text-align: center;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.about-section {
+  background: #647d69;
+  width: auto;
+  height: 342px;
+  flex: 1;
+}
+
+.about-section p{
+  color:white;
+  font-size: 20px;
+  display: flex;
+  font-family: "Inclusive Sans", serif;
+  font-weight: 400;
+  letter-spacing: 0px;
+  text-align: center;
+  max-width: 250px;
+  margin: 0 auto;
+}
+  </style>
   <body>
     <header class="header">
       <div class="header-container"></div>
@@ -18,7 +67,7 @@
           <li><a href="about.html">About</a></li>
           <li><a href="products.html">Products</a></li>
           <li><a href="resources.html">Resources</a></li>
-          <li><button href="contact.html" class="button">Contact</button></li>
+          <li><a href="contact.html" class="a-button">Contact</a></li>
         </ul>
       </div>
     </nav>
@@ -27,22 +76,22 @@
       <p class="p">We started Career-Path Bundles after noticing how limited current first aid kits are. The same materials won’t work for the same professions or people. An artist, doctor, patient, or athlete don’t have the same needs or challenges. We don’t believe in the one-size-fits-all narrative in this industry, so we built recovery kits built for you.</p>
     <div class="about-section">
       <div style="display:flex; gap: 48px; padding:48px 80px; margin:0 auto;">
-        <div style="flex:1; display:flex; flex-direction:column; align-items:center; text-align:center; gap:1rem;">
-          <div style="width:50px; height:50px; background:lightgray;"></div>
+        <div style="flex:1; display:flex; flex-direction:column; align-items:center; text-align:center; gap:16px;">
+          <img src="images/bandaidIMG.png" style="width:50px; height:50px;">
           <p style="flex:1;">Stop settling for generic bandages that fail when  you need them most. Get curated recovery kits built for your craft's unique demands.</p>
         </div>
-        <div style="flex:1; display:flex; flex-direction:column; align-items:center; text-align:center; gap:1rem;">
-          <div style="width:50px; height:50px; background:lightgray;"></div>
+        <div style="flex:1; display:flex; flex-direction:column; align-items:center; text-align:center; gap:16px;">
+          <img src="images/brokenBoneIMG.png" style="width:50px; height:50px;">
           <p style="flex:1;">Injuries can ruin a career. The wrong kit only makes things worse. Career-Path Bundles focuses on the people behind the bandages.</p>
         </div>
-        <div style="flex:1; display:flex; flex-direction:column; align-items:center; text-align:center; gap:1rem;">
-          <div style="width:50px; height:50px; background:lightgray;"></div>
+        <div style="flex:1; display:flex; flex-direction:column; align-items:center; text-align:center; gap:16px;">
+          <img src="images/medkitIMG.png" style="width:50px; height:50px;">
           <p style="flex:1;">Most studios or gyms run out of first aid materials and waste time restocking. Order our bundles in bulk and subscribe to our replenishment services.</p>
         </div>
       </div>  
     </div>
     </div>
-    <img src='aboutIMG.png' style="width:100%; height: 300px; object-fit: cover;">
+    <img src='images/aboutIMG.png' style="width:100%; height: 300px; object-fit: cover;">
     <footer>
         <div class="footer-section">
     </footer>

@@ -96,6 +96,7 @@ body {
     display: flex;
     gap: 3rem;
     list-style: none;
+    align-items: center;
 }
 
 .nav-links a {
@@ -161,10 +162,24 @@ section#home {
     list-style: none;
 }
 
-.container button {
-    margin-top: 25px;
-    background: var(--sage);
-    border: 2px solid var(--sage);
+.nav-links .a-button {
+    background: var(--green);
+    font-size: 16px;
+    color:white;
+    border: none;
+    text-align: center;
+    border-radius: 5px;
+    font-family: "Inclusive Sans", serif;
+    padding: 4px 18px;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer; 
+    text-decoration: none;
+}
+
+.nav-links .a-button:hover {
+    background-color: var(--drkgreen);
+    color: white;
 }
 
 .page-container {
