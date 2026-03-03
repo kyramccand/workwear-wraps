@@ -300,6 +300,40 @@ p {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+.FAQs {
+    max-width: 75%;
+    margin: auto;
+    padding-top: 20px;
+    border-radius: 15px;
+}
+
+.FAQs p {
+    color: #000000;
+}
+
+.FAQs button {
+    background-color: #FFFFFF;
+    width: 100%;
+    cursor: pointer;
+    font-size: 17px;
+    border: none;
+    transition: 0.3s;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    font-family: 'Inclusive Sans', serif;
+    font-weight: 400;
+}
+
+.FAQs button i {
+    color: #D9D9D9;
+}
+
+.FAQs button.active i {
+    transform: rotate(180deg);
+    transition: transform 0.3 ease;
+}
+
 footer {
     width: 100%;
     background: #A1C5AB;

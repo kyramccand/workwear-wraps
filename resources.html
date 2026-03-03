@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Workwear Wraps</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   </head>
 
   <body>
@@ -15,23 +16,81 @@
       <div class="nav-container">
         <a href="index.html" class="logo"> LOGO </a>
         <ul class="nav-links">
-<<<<<<< Updated upstream
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="products.html">Products</a></li>
-          <li><a href="resources.html">Resources</a></li>
-           <li><a href="contact.html" class="a-button">Contact</a></li>
-=======
             <li><a href="about.html">About Us</a></li>
             <li><a href="products.html">Products</a></li>
             <li><a href="reviews.html">Reviews</a></li>
-            <li><a href="faq.html">FAQs</a></li>
-            <li><button href="contact.html" class="button">Contact</button></li>
->>>>>>> Stashed changes
+            <li><a href="resources.html">FAQs</a></li>
+            <li><a href="contact.html"><button class="button">Contact</button></a></li>
         </ul>
       </div>
     </nav>
     <div class="page-container">
-      <h1>Resources</h1>
+      <h1>FAQs</h1>
+      <p>Everything you need to know about kits. If you don't see your question, please contact us.</p>
+      <div class="FAQs">
+        <button class="question">
+          How do I know what kit or deal is right for me?
+          <i class="fa-solid fa-angle-down"></i>
+        </button>   
+        <div class="answer">
+          <p>you'll just know.</p>
+        </div>
+        <button class="question">
+          What's included in each kit?
+          <i class="fa-solid fa-angle-down"></i>
+        </button>   
+        <div class="answer">
+          <p>Lot's of stuff</p>
+        </div> 
+        <button class="question">
+          How do these kits differ from a regular first aid kit?
+          <i class="fa-solid fa-angle-down"></i>
+        </button>   
+        <div class="answer">
+          <p>They're better.</p>
+        </div>  
+        <button class="question">
+          Are the kits safe for people who have sensitive skin?
+          <i class="fa-solid fa-angle-down"></i>
+        </button>   
+        <div class="answer">
+          <p>Probably.</p>
+        </div>
+        <button class="question">
+          I'm not a professional. Can I still use these kits?
+          <i class="fa-solid fa-angle-down"></i>
+        </button>   
+        <div class="answer">
+          <p>As long as you're paying.</p>
+        </div>
+        <button class="question">
+          How often do I need to replace my kit?
+          <i class="fa-solid fa-angle-down"></i>
+        </button>   
+        <div class="answer">
+          <p>As often as maximizes profit.</p>
+        </div>     
+      </div>
+
+      <script>
+        var ourQuestions = document.querySelectorAll(".question");
+
+        for (i = 0; i < ourQuestions.length; i++) {
+          ourQuestions[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+
+            var answer = this.nextElementSigling;
+            answer.classList.toggle("show");
+
+            if (answer.style.display === "block") {
+              answer.style.display = "none";
+            } else {
+              answer.style.display = "block";
+            }
+          });
+        }
+      </script>
+
     </div>
     <footer>
         <div class="footer-section">
