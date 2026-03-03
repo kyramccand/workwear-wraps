@@ -131,10 +131,10 @@ section#home {
     padding-left: 50px;
     padding-top: 30px;
     margin: 0 auto;
-    background: linear-gradient(to right, #647D69 50%, #ffffff00) no-repeat center center;
+    background: linear-gradient(to right, #647D69 30%, #ffffff00), url('./images/compressed_jason-leung-BXAnnFhEs4o-unsplash.jpg');
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-blend-mode: overlay;
     width: 100%;
     flex-direction: column;
 }
@@ -212,20 +212,27 @@ section#home {
     flex: 1;
 }
 
-.form-container {
+.form-container, .review-box {
     display: flex;
     flex-direction: column;
     background: #ffffff;
     border-radius: 10px;
+    width: 100%;
 }
 
 form {
     width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
 }
 
 form label {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     display: block;
+    width: 100%;
+    text-align: left;
 }
 
 form input {
@@ -293,4 +300,25 @@ footer {
     h2 {
         font-size: 1.8rem;
     }
+
+    .columns {
+        flex-direction: column;
+    }
+
+    .container h1 {
+        width: 100%;
+    }
+
+    .container p {
+        width: 100%;
+    }
+
+    .container {
+        /* image placeholder */
+        background: #929292;
+        display: flex;
+        padding: 30px;
+        align-items: center;
+    }
+
 }
