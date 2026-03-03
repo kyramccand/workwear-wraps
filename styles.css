@@ -21,13 +21,16 @@ html, body {
     --sandidk: #d4d1c9;        
 }
 
-.button {
+.button, form input[type="submit"] {
       width: 80px;
       height: 30px;
       background-color: #647D69;
-      color: white;
+      color: rgb(255, 255, 255);
       border-radius: 5px;
       border-color: #647D69;
+      font-family: 'IM FELL French Canon', serif;
+      text-align: center;
+      font-size: 13px;
     }
 
 body {
@@ -93,6 +96,7 @@ body {
     display: flex;
     gap: 3rem;
     list-style: none;
+    align-items: center;
 }
 
 .nav-links a {
@@ -128,10 +132,10 @@ section#home {
     padding-left: 50px;
     padding-top: 30px;
     margin: 0 auto;
-    background-image: url("https://cdn.thewirecutter.com/wp-content/media/2024/07/firstaidkits-2048px-00278-2x1-1.jpg?width=2048&quality=75&crop=2:1&auto=webp"), linear-gradient(to right, #647D69, #B5E3BF);
+    background: linear-gradient(to right, #647D69, transparent), url('./images/compressed_jason-leung-BXAnnFhEs4o-unsplash.jpg');
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-blend-mode: overlay;
     width: 100%;
     flex-direction: column;
 }
@@ -142,13 +146,14 @@ section#home {
     font-family: 'IM FELL French Canon', serif;
     font-size: 36px;
     font-weight: 400;
+    text-shadow: 2px 2px 4px #00000068;
 }
 
 .container p {
     width: 50%;
     font-size: 16px;
     display: flex;
-    font-family: 'Inclusive Sans', serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-weight: 400;
     color: #FFFFFF;
 }
@@ -157,15 +162,31 @@ section#home {
     list-style: none;
 }
 
-.container button {
-    margin-top: 25px;
-    background: var(--sage);
-    border: 2px solid var(--sage);
+.nav-links .a-button {
+    background: var(--green);
+    font-size: 16px;
+    color:white;
+    border: none;
+    text-align: center;
+    border-radius: 5px;
+    font-family: "Inclusive Sans", serif;
+    padding: 4px 18px;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer; 
+    text-decoration: none;
+}
+
+.nav-links .a-button:hover {
+    background-color: var(--drkgreen);
+    color: white;
 }
 
 .page-container {
     background: #E5F4E9;
     flex: 1;
+    padding: 30px 50px;
+    margin: 0 auto;
 }
 
 .page-container h1 {
@@ -183,25 +204,78 @@ section#home {
     justify-content: center;
     align-items: center;
     display: flex;
-    font-family: 'Inclusive Sans', serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 400;
     font-weight: 400;
     color: #647D69;
-    padding-right: 25%;
-    padding-left: 25%;
+}
+
+.columns {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.columns div {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 30px;
+    flex: 1;
+}
+
+.form-container, .review-box {
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    border-radius: 10px;
+    width: 100%;
+}
+
+form {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: block;
+    width: 100%;
+    text-align: left;
+}
+
+form input {
+    width: 100%;
+    border: none;
+    background: #EFEFEF;
+    display: block;
+    margin-bottom: 16px;
+    border-radius: 4px;
+    height: 30x;
+    padding: 10px;
+}
+
+form input[type="submit"] {
+    margin: 0 auto;
 }
 
 h2 {
-    font-size: 2.2rem;
+    font-size: 24px;
     margin-bottom: 1rem;
     color: var(--dark);
-    text-align: center;
     font-weight: 400;
     letter-spacing: 1px;
     position: relative;
-    padding-bottom: 1.5rem;
+    /* padding-bottom: 1.5rem; */
 }
 
-h2::after {
+/* h2::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -210,7 +284,7 @@ h2::after {
     width: 60px;
     height: 2px;
     background: var(--green);
-}
+} */
 
 h3 {
     color: var(--dark);
@@ -223,6 +297,7 @@ h3 {
 p {
     color: #555;
     line-height: 1.8;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .FAQs {
@@ -274,4 +349,25 @@ footer {
     h2 {
         font-size: 1.8rem;
     }
+
+    .columns {
+        flex-direction: column;
+    }
+
+    .container h1 {
+        width: 100%;
+    }
+
+    .container p {
+        width: 100%;
+    }
+
+    .container {
+        /* image placeholder */
+        background: #929292;
+        display: flex;
+        padding: 30px;
+        align-items: center;
+    }
+
 }

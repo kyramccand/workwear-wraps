@@ -4,6 +4,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Workwear Wraps</title>
     <link rel="stylesheet" href="styles.css" />
+
+    <style>
+      .kit-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr; /*fr sets the column grid to a fraction of the screen size (adjusts so might be best)... https://www.w3schools.com/css/css_grid_tracks.asp*/
+      gap: 20px;
+      padding: 0 24px 48px;
+      max-width: 800px;
+      margin: 0 auto;
+      }
+      .kit-card{
+        height: 413px;
+        background-color: #ffffff;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+      }
+      .kit-button{
+        align-self: center;
+        background-color: #647D69;
+        border: none;
+        border-radius: 20px;
+        padding: 15px 48px;
+      }
+      .kit-text{
+        padding: 18px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .kit-card-title{
+        font-size: 18px;
+        font-weight: normal;
+      }
+      .kit-description{
+        font-size: 13px;
+        color: #000000;
+      }
+      .kit-text a {
+        align-self: center;
+      }
+      .kit-image{
+        width: 100%;
+        height: 200px;
+        border-radius: 10px;
+        
+        background-color: #D9D9D9;
+      }
+      body{
+        background-color: #E5F4E9;
+      }
+      .page-container p{
+        color: #647D69; /*text color*/
+      }
+
+    </style>
   </head>
 
   <body>
@@ -15,23 +71,74 @@
       <div class="nav-container">
         <a href="index.html" class="logo"> LOGO </a>
         <ul class="nav-links">
+<<<<<<< HEAD
           <li><a href="about.html">About Us</a></li>
           <li><a href="products.html">Products</a></li>
           <li><a href="resources.html">Resources</a></li>
           <li><button href="contact.html" class="button">Contact</button></li>
+=======
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="faq.html">FAQs</a></li>
+            <li><button href="contact.html" class="button">Contact</button></li>
+>>>>>>> main
         </ul>
       </div>
     </nav>
 
     <div class="page-container">
       <h1>Products</h1>
-      <p>These are our products</p>
+      <p>First aid designed for you. 
+        Every product is made to meet the demands of your profession. </p>
     </div>
+
+    <div class="kit-grid" id="kit-grid"></div> <!--the grid to store the cards-->
 
     <footer>
         <div class="footer-section">
         </div>
     </footer>
+    <script>
+      //array of objects (the products)!
+      var products = [ 
+        {
+          name: "Preforming Arts Kit",
+          description: "A kit designed for dancers, musicians and stage crew. This kit contains skin-safe adhesives for every movement, costume change, or instrument.",
+          link: "performing-arts.html",
+          image: "images/performing.jpg"
+        },
+        {
+          name: "Sports & Fitness Kit",
+          description: "For athletes and trainers. This kit contains extra-durable, sweat-wicking bandages that can protect though all reps.",
+          link: "sports-fitness.html",
+          image: "images/sports.jpg"
+        },
+        {
+          name: "Medical & Clinical Kit",
+          description: "This kit is designed for patient home-care or in-office work. It provides sterile wound care no matter the place.",
+          link: "medical.html",
+          image: "images/med.jpg"
+        },
+        {
+          name: "Visual Arts Kit",
+          description: "Designed to survive the abrasive reality of all mix-media studios. This kit contains thin waterproof seals that won’t get in the way.",
+          link: "visual-arts.html",
+          image: "images/visual_arts.jpg"
+        }
+      ];
+      var grid = document.getElementById("kit-grid"); //DOM object
+      products.forEach(function(product){
+        grid.innerHTML +=
+          '<div class="kit-card">' +
+            '<div class="kit-image"><img src="' + product.image + '" style="width:100%; height:100%; object-fit:cover; border-radius:10px;"></div>' +
+            '<div class="kit-text">' +
+              '<h3 class="kit-card-title">'+ product.name +'</h3>' +
+              '<p class="kit-description">' + product.description + '</p>'
+              + '<a href="' + product.link + '"><button class="kit-button"></button></a>' 
+              + ' </div>' + '</div>';
+      });
+    </script>
 
   </body>
 </html>
