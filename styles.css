@@ -187,6 +187,7 @@ section#home {
     flex: 1;
     padding: 30px 50px;
     margin: 0 auto;
+    width: 100%;
 }
 
 .page-container h1 {
