@@ -131,7 +131,7 @@ section#home {
     padding-left: 50px;
     padding-top: 30px;
     margin: 0 auto;
-    background: linear-gradient(to right, #647D69 30%, #ffffff00), url('./images/compressed_jason-leung-BXAnnFhEs4o-unsplash.jpg');
+    background: linear-gradient(to right, #647D69, transparent), url('./images/compressed_jason-leung-BXAnnFhEs4o-unsplash.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
