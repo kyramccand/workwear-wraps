@@ -1,0 +1,262 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script   src="https://code.jquery.com/jquery-3.1.1.min.js"   
+	integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   
+	crossorigin="anonymous"></script>
+    <title>Workwear Wraps</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style type="text/css">
+
+        input#description {
+            height: 100px;
+        }
+
+        section#reviews {
+            flex: 1;
+            flex-direction: column;
+            display: flex;
+            padding: 5rem 2rem;
+            background: #647D69;
+        }
+
+        section#reviews h2 {
+            color: #ffffff;
+        }
+
+        div .stars-container {
+            display: flex;
+            flex-direction: row;
+            width: 100px;
+        }
+
+        .star {
+            flex: 1;
+            color: #ffbe3d;
+        }
+
+        .no-star {
+            flex: 1;
+            color: #D9D9D9;
+        }
+
+        #rating-stats {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: left;
+            gap: 10px;
+        }
+
+        #rating-stats p {
+            color: #D0E5CF;
+        }
+
+        #reviews-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .review-box {
+            width: 100%;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            padding: 10px;
+            font-size: 12px;
+            color: #647D69;
+        }
+
+        .review-box .name {
+            color: rgb(0, 0, 0);
+            font-size: 14px;
+            font-weight: 800;
+        }
+
+        #star-choice-container {
+            width: 200px;
+            display: flex;
+            flex-direction: row;
+            cursor: pointer
+        }
+
+        @media (max-width: 768px) {
+            #reviews-container {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+
+    </style>
+    
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="header-container"></div>
+    </header>
+
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="logo"> LOGO </a>
+        <ul class="nav-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="resources.html">FAQs</a></li>
+            <li><a href="contact.html"><button class="button">Contact</button></a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="page-container">
+        <div class="columns">
+            <div>
+                <h1>Reviews</h1>
+                <p>Had an experience with one of our kits? Leave a review expressing your opinions.
+                    We'd love to hear about and your feedback helps us continue to build better.</p>
+            </div>
+            <div class="form-container">
+                <h2>Write a Review</h2>
+                <form id="review-form">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="rating">Rating</label>
+                    <div id="star-choice-container">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="no-star" data-value="1"><path fill="currentColor" d="m5.825 21l2.325-7.6L2 9h7.6L12 1l2.4 8H22l-6.15 4.4l2.325 7.6L12 16.3z" /></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="no-star" data-value="2"><path fill="currentColor" d="m5.825 21l2.325-7.6L2 9h7.6L12 1l2.4 8H22l-6.15 4.4l2.325 7.6L12 16.3z" /></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="no-star" data-value="3"><path fill="currentColor" d="m5.825 21l2.325-7.6L2 9h7.6L12 1l2.4 8H22l-6.15 4.4l2.325 7.6L12 16.3z" /></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="no-star" data-value="4"><path fill="currentColor" d="m5.825 21l2.325-7.6L2 9h7.6L12 1l2.4 8H22l-6.15 4.4l2.325 7.6L12 16.3z" /></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="no-star" data-value="5"><path fill="currentColor" d="m5.825 21l2.325-7.6L2 9h7.6L12 1l2.4 8H22l-6.15 4.4l2.325 7.6L12 16.3z" /></svg>
+                    </div>
+                    <label for="description">Description</label>
+                    <input type="text" id="description" name="description" required>
+
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+    </div>
+    <section id="reviews">
+        <h2>Customer Testimonials</h2>
+        <div id="rating-stats">
+        </div>
+        <div id="reviews-container">
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-section">
+    </footer>
+  </body>
+  <script>
+
+        reviews = [];
+        loadReviews();
+
+        // https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
+        document.querySelector("form").addEventListener("submit", function(e) {
+            e.preventDefault();
+
+            let newReview = {
+                Name: document.getElementById("name").value,
+                Rating: selectedRating,
+                Comment: document.getElementById("description").value,
+                Time: new Date().toLocaleDateString()
+            };
+
+            document.getElementById("review-form").reset();
+
+            reviews.push(newReview);
+            clearSelectedStars();
+            displayReviews();
+            displayStats();
+        });
+
+        // Getting the selected rating
+        let selectedRating = 0;
+        // Finds all svgs inside the star choice container
+        document.querySelectorAll("#star-choice-container svg").forEach(function(star) {
+            // Listens for a click
+            star.addEventListener("click", function() {
+                // Save the selected rating
+                selectedRating = this.getAttribute("data-value");
+                // Colors all the stars up to the clicked one
+                document.querySelectorAll("#star-choice-container svg").forEach(function(s) {
+                    if (s.getAttribute("data-value") <= selectedRating) {
+                        s.setAttribute("class" , "star");
+                    }
+                    else {
+                        s.setAttribute("class" , "no-star");
+                    }
+                });
+            });
+        });
+        
+
+        function loadReviews() {
+            $.get( "https://kyramccand.github.io/workwear-wraps/reviews.json", 
+                function( data ) {
+                    reviews = data;
+                    displayReviews();
+                    displayStats();
+            })
+        }
+
+        function displayReviews() {
+            // Clear existing reviews
+            document.getElementById("reviews-container").innerHTML = "";
+
+            let reviewCount = 0;
+
+            reviews.forEach(function(review) {
+                displayReview(review, "reviews-container", reviewCount);
+                reviewCount++;
+
+            }); // End of forEach
+        } // end of displayReviews
+
+        function displayReview(review, elementId, reviewId) {
+            document.getElementById(elementId).innerHTML += "<div class='review-box' id='review-box" + reviewId + "'>" + 
+                    "<div class='name'>" + review.Name + "</div>" +
+                    "<div>" + review.Time + "</div>" +
+                    stringOfStars(review.Rating) +
+                    "<div>" + review.Comment + "</div>" +
+                    "</div>";
+        } // End of displayReview
+
+        function stringOfStars(numStars) {
+            let html = "<div class='stars-container'>";
+            for (let i = 1; i <= 5; i++) {
+                let starClass = "no-star";
+                if (i <= Math.round(numStars)) {
+                    starClass = "star";
+                }
+                html += "<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' class=" + starClass + ">" +
+                    "<path fill='currentColor' d='m5.825 21l2.325-7.6L2 9h7.6L12 1l2.4 8H22l-6.15 4.4l2.325 7.6L12 16.3z' />" +
+                    "</svg>"
+            }
+            html += "</div>";
+            return html;
+        } // End of stringOfStars
+
+        function displayStats() {
+            // Get the average rating rounded to 1 decimal point
+            let totalStars = 0;
+            reviews.forEach((review) => totalStars += parseInt(review.Rating));
+            let averageRating = (totalStars/reviews.length).toFixed(1);
+            // Diplay it
+            document.getElementById("rating-stats").innerHTML = stringOfStars(averageRating) +
+            "<p>" + averageRating + " rating of " + reviews.length + " reviews";
+        }
+
+        function clearSelectedStars() {
+            document.querySelectorAll("#star-choice-container svg").forEach(function(s) {
+                s.setAttribute("class" , "no-star");
+            });
+        }
+
+  </script>
+</html>
