@@ -160,12 +160,7 @@
         document.querySelector("form").addEventListener("submit", function(e) {
             e.preventDefault();
 
-            let newReview = {
-                Name: document.getElementById("name").value,
-                Rating: selectedRating,
-                Comment: document.getElementById("description").value,
-                Time: new Date().toLocaleDateString()
-            };
+            let newReview = new Review(document.getElementById("name").value, selectedRating, document.getElementById("description").value, new Date().toLocaleDateString());
 
             document.getElementById("review-form").reset();
 
@@ -256,6 +251,13 @@
             document.querySelectorAll("#star-choice-container svg").forEach(function(s) {
                 s.setAttribute("class" , "no-star");
             });
+        }
+
+        function Review(name, rating, comment, time) {
+            this.Name = name,
+            this.Rating = rating,
+            this.Comment = comment,
+            this.Time = time
         }
 
   </script>

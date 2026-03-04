@@ -372,11 +372,13 @@ footer {
     }
 
     .container {
-        /* image placeholder */
-        background: #929292;
+        background: linear-gradient(to bottom, #647D69, transparent), url('./images/compressed_jason-leung-BXAnnFhEs4o-unsplash.jpg');
         display: flex;
         padding: 30px;
         align-items: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
     }
 
 }
