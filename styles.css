@@ -259,6 +259,14 @@ p {
     transition: transform 0.3 ease;
 }
 
+.answer {
+    display: none;
+}
+
+.answer.show {
+    display: block;
+}
+
 footer {
     width: 100%;
     background: #A1C5AB;
