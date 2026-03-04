@@ -182,6 +182,28 @@ section#home {
     color: white;
 }
 
+.dropdown:hover .dropdownOptions {
+    display: block;
+}
+
+.dropdown button {
+    border: none;
+    background: white;
+    color: var(--green);
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+    position: relative;
+    letter-spacing: 0.5px;
+    font-family: "Inclusive Sans", serif;
+    font-size: 16px;
+}
+
+.dropdownOptions {
+    display: none;
+}
+
 .page-container {
     background: #E5F4E9;
     flex: 1;

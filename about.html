@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Workwear Wraps</title>
     <link rel="stylesheet" href="styles.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   </head>
   <style>
     
@@ -61,17 +62,28 @@
     </header>
 
     <nav class="navbar">
-      <div class="nav-container">
-        <a href="index.html" class="logo"> LOGO </a>
-        <ul class="nav-links">
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="products.html">Products</a></li>
-            <li><a href="reviews.html">Reviews</a></li>
-            <li><a href="resources.html">FAQs</a></li>
-            <li><a href="contact.html"><button class="button">Contact</button></a></li>
-        </ul>
-      </div>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                LOGO
+            </a>
+            <ul class="nav-links">
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="products.html">Products</a></li>
+                <div class="dropdown">
+                    <button>
+                        Resources
+                        <i class="fa-solid fa-angle-down"></i>
+                    </button>
+                    <div class="dropdownOptions">
+                        <li><a href="reviews.html">Reviews</a></li>
+                        <li><a href="resources.html">FAQs</a></li>
+                    </div>
+                </div>
+                <li><a href="contact.html"><button class="button">Contact</button></a></li>
+            </ul>
+        </div>
     </nav>
+
     <div class="about-container">
       <h1>About</h1>
       <p class="p">We started Career-Path Bundles after noticing how limited current first aid kits are. The same materials won't work for the same professions or people. An artist, doctor, patient, or athlete don’t have the same needs or challenges. We don’t believe in the one-size-fits-all narrative in this industry, so we built recovery kits built for you.</p>

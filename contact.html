@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Workwear Wraps</title>
     <link rel="stylesheet" href="styles.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   </head>
 
   <body>
@@ -20,46 +21,69 @@
           padding: 20px;
         }
 
-        #feedback {
-          width: 75%;
-          height: 200px;
-          margin: auto 0;
+        div .content-container {
           display: flex;
-          padding: 10px;
+          flex-direction: column;
+          justify-content: center;
+          text-align: center;
+          width: 60%;
+          margin: 0 auto;
         }
 
-        .submitButton {
-          background-color: #647D69;
-          color: white;
-          border-radius: 10px;
-          padding: 7px;
-          border: none;
+        #feedback {
+          height: 200px;
         }
+
       </style>
     </header>
 
     <nav class="navbar">
-      <div class="nav-container">
-        <a href="index.html" class="logo"> LOGO </a>
-        <ul class="nav-links">
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="products.html">Products</a></li>
-            <li><a href="reviews.html">Reviews</a></li>
-            <li><a href="resources.html">FAQs</a></li>
-            <li><a href="contact.html"><button class="button">Contact</button></a></li>
-        </ul>
-      </div>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                LOGO
+            </a>
+            <ul class="nav-links">
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="products.html">Products</a></li>
+                <div class="dropdown">
+                    <button>
+                        Resources
+                        <i class="fa-solid fa-angle-down"></i>
+                    </button>
+                    <div class="dropdownOptions">
+                        <li><a href="reviews.html">Reviews</a></li>
+                        <li><a href="resources.html">FAQs</a></li>
+                    </div>
+                </div>
+                <li><a href="contact.html"><button class="button">Contact</button></a></li>
+            </ul>
+        </div>
     </nav>
-    <div class="page-container">
-      <h1>Contact Us</h1>
-      <p>Have a question about our kits, ordering, or logisitics? We're here to help out!
-        Reach out and a person from our team will get back to you in 1-2 business days.
-      </p>
 
-      <form>
-          <input type="text" id="feedback" name="feedback" placeholder="Let us know what you're thinking here!"><br>
-          <input type="submit" value="Submit" class="submitButton">
-      </form>
+    <div class="page-container">
+      <div class="content-container">
+        <h1>Contact Us</h1>
+        <p>Have a question about our kits, ordering, or logisitics? We're here to help out!
+          Reach out and a person from our team will get back to you in 1-2 business days.
+        </p>
+
+        <div class="form-container">
+          <form>
+              <label for="name">Name*</label>
+              <input type="name" name="name" required>
+              <label for="email">Email*</label>
+              <input type="email" name="email" required>
+              <label for="phone-num">Phone number</label>
+              <input type="tel" name="phone-num">
+              <label for="age">Age*</label>
+              <input type="number" name="age" requred>
+              <label for="profession">Profession*</label>
+              <input type="text" name="profession" required>
+              <input type="text" id="feedback" name="feedback" placeholder="Let us know what you're thinking here!"><br>
+              <input type="submit" value="Submit" class="submitButton">
+          </form>
+        </div>
+      </div>
     </div>
     <footer>
         <div class="footer-section">
