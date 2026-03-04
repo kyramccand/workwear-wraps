@@ -182,6 +182,41 @@ section#home {
     color: white;
 }
 
+.dropdown:hover .dropdownOptions {
+    display: block;
+    background-color: white;
+    width: 150px;
+    padding: 15px;
+}
+
+.dropdown:hover .dropdownOptions a:hover {
+    color: var(--sage);
+}
+
+.dropdown button {
+    border: none;
+    background: white;
+    color: var(--green);
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+    position: relative;
+    letter-spacing: 0.5px;
+    font-family: "Inclusive Sans", serif;
+    font-size: 16px;
+}
+
+.dropdown button i {
+    color: var(--green);
+    font-size: 0.8rem;
+}
+
+.dropdownOptions {
+    display: none;
+    position: absolute;
+}
+
 .page-container {
     background: #E5F4E9;
     flex: 1;
