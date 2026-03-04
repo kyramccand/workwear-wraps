@@ -72,21 +72,15 @@
         </div>     
       </div>
 
-      <script>
+       <script>
         var ourQuestions = document.querySelectorAll(".question");
 
         for (i = 0; i < ourQuestions.length; i++) {
           ourQuestions[i].addEventListener("click", function() {
             this.classList.toggle("active");
 
-            var answer = this.nextElementSigling;
+            var answer = this.nextElementSibling;
             answer.classList.toggle("show");
-
-            if (answer.style.display === "block") {
-              answer.style.display = "none";
-            } else {
-              answer.style.display = "block";
-            }
           });
         }
       </script>
