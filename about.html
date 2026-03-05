@@ -4,59 +4,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Workwear Wraps</title>
     <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  </head>
+     <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
   <style>
-    
-  .about-container {
-    background: #e5f4e9;
-    flex: 1;
-  }
+    .about-container {
+      background: #e5f4e9;
+      flex: 1;
+    }
 
-.about-container h1 {
-  font-family: "Inclusive Sans", serif;
-  font-size: 36px;
-  font-weight: 400;
-  color: #000000;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  margin: 20px 0 0 0;
-}
+    .about-container h1 {
+      font-family: "Inclusive Sans", serif;
+      font-size: 36px;
+      font-weight: 400;
+      color: #000000;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      margin: 20px 0 0 0;
+    }
 
-.about-container p {
-  color:#647d69;
-  font-size: 16px;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  font-weight: 400;
-  letter-spacing: 0px;
-  text-align: center;
-  max-width: 850px;
-  margin: 0 auto 30px auto;
-}
+    .about-container p {
+      color: #647d69;
+      font-size: 16px;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      font-family:
+        "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      font-weight: 400;
+      letter-spacing: 0px;
+      text-align: center;
+      max-width: 850px;
+      margin: 0 auto 30px auto;
+    }
 
-.about-section {
-  background: #647d69;
-  width: auto;
-  height: 342px;
-  flex: 1;
-}
+    .about-section {
+      background: #647d69;
+      width: auto;
+      height: auto;
+      flex: 1;
+    }
 
-.about-section p {
-  color:white;
-  font-size: 16px;
-  display: flex;
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  font-weight: 400;
-  letter-spacing: 0px;
-  text-align: center;
-  max-width: 250px;
-  margin: 0 auto;
-}
+    .about-section p {
+      color: white;
+      font-size: 16px;
+      display: flex;
+      font-family:
+        "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      font-weight: 400;
+      letter-spacing: 0px;
+      text-align: center;
+      max-width: 250px;
+      margin: 0 auto;
+    }
 
+    /* Anyone looking at this should copy since it looks better on mobile */
+    @media (max-width: 768px) {
+      .about-section {
+        height: auto;
+        padding-bottom: 24px;
+      }
+
+      .about-section > div {
+        flex-direction: column !important;
+        padding: 24px 20px !important;
+        gap: 32px !important;
+      }
+
+      .about-section p {
+        max-width: 100% !important;
+      }
+    }
   </style>
   <body>
     <header class="header">
@@ -64,55 +86,128 @@
     </header>
 
     <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="logo">
+      <div class="nav-container">
+        <a href="index.html" class="logo">
                 <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24">
                     <path fill="currentColor" fill-rule="evenodd" d="M3.213 3.213a4.14 4.14 0 0 0 0 5.858L14.93 20.787a4.142 4.142 0 0 0 5.858-5.858L9.07 3.213a4.14 4.14 0 0 0-5.858 0m6.132 5.018A.788.788 0 1 0 8.23 9.345A.788.788 0 0 0 9.345 8.23m2.784.928a.787.787 0 1 0-1.114 1.114a.787.787 0 0 0 1.114-1.114m3.712 3.712a.788.788 0 1 1-1.114 1.114a.788.788 0 0 1 1.114-1.114m.929 3.899a.787.787 0 1 0-1.114-1.114a.787.787 0 0 0 1.114 1.114m-3.713-3.713a.787.787 0 1 0-1.113-1.114a.787.787 0 0 0 1.113 1.114m.928 1.67a.788.788 0 1 1-1.114 1.114a.788.788 0 0 1 1.114-1.113M9.16 11.016a.787.787 0 1 1 1.114 1.114a.787.787 0 0 1-1.114-1.114" clip-rule="evenodd" />
                     <path fill="currentColor" d="M20.787 9.071a4.142 4.142 0 0 0-5.858-5.858L12 6.143L17.858 12zM12 17.858L6.142 12l-2.929 2.929a4.142 4.142 0 0 0 5.858 5.858z" opacity="0.5" />
                 </svg>
                 Workwear Wraps
             </a>
-            <ul class="nav-links">
-                <li><a href="about.html">About</a></li>
-                <li><a href="products.html">Products</a></li>
-                <div class="dropdown">
-                    <button>
-                        Resources
-                        <i class="fa-solid fa-angle-down"></i>
-                    </button>
-                    <div class="dropdownOptions">
-                        <li><a href="reviews.html">Reviews</a></li>
-                        <li><a href="resources.html">FAQs</a></li>
-                    </div>
-                </div>
-                <li><a href="contact.html"><button class="button">Contact</button></a></li>
-            </ul>
-        </div>
+        <span class="circle">
+          <h1 style="color: var(--green)" id="toggleBar">☰</h1>
+        </span>
+        <ul class="nav-links">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="products.html">Products</a></li>
+          <div class="dropdown">
+            <button>
+              Resources
+              <i class="fa-solid fa-angle-down"></i>
+            </button>
+            <div class="dropdownOptions">
+              <li><a href="reviews.html">Reviews</a></li>
+              <li><a href="resources.html">FAQs</a></li>
+            </div>
+          </div>
+          <li>
+            <a href="contact.html"><button class="button">Contact</button></a>
+          </li>
+        </ul>
+      </div>
     </nav>
-    
+
     <div class="about-container">
       <h1>About</h1>
-      <p class="p">We started Career-Path Bundles after noticing how limited current first aid kits are. The same materials won't work for the same professions or people. An artist, doctor, patient, or athlete don’t have the same needs or challenges. We don’t believe in the one-size-fits-all narrative in this industry, so we built recovery kits built for you.</p>
-    <div class="about-section">
-      <div style="display:flex; gap: 48px; padding:48px 80px; margin:0 auto;">
-        <div style="flex:1; display:flex; flex-direction:column; align-items:center; text-align:center; gap:16px;">
-          <img src="images/bandaidIMG.png" style="width:50px; height:50px;">
-          <p style="flex:1;">Stop settling for generic bandages that fail when  you need them most. Get curated recovery kits built for your craft's unique demands.</p>
+      <p class="p">
+        We started Career-Path Bundles after noticing how limited current first
+        aid kits are. The same materials won't work for the same professions or
+        people. An artist, doctor, patient, or athlete don’t have the same needs
+        or challenges. We don’t believe in the one-size-fits-all narrative in
+        this industry, so we built recovery kits built for you.
+      </p>
+      <div class="about-section">
+        <div
+          style="display: flex; gap: 48px; padding: 48px 80px; margin: 0 auto"
+        >
+          <div
+            style="
+              flex: 1;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              text-align: center;
+              gap: 16px;
+            "
+          >
+            <img
+              src="images/bandaidIMG.png"
+              style="width: 50px; height: 50px"
+            />
+            <p style="flex: 1">
+              Stop settling for generic bandages that fail when you need them
+              most. Get curated recovery kits built for your craft's unique
+              demands.
+            </p>
+          </div>
+          <div
+            style="
+              flex: 1;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              text-align: center;
+              gap: 16px;
+            "
+          >
+            <img
+              src="images/brokenBoneIMG.png"
+              style="width: 50px; height: 50px"
+            />
+            <p style="flex: 1">
+              Injuries can ruin a career. The wrong kit only makes things worse.
+              Career-Path Bundles focuses on the people behind the bandages.
+            </p>
+          </div>
+          <div
+            style="
+              flex: 1;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              text-align: center;
+              gap: 16px;
+            "
+          >
+            <img src="images/medkitIMG.png" style="width: 50px; height: 50px" />
+            <p style="flex: 1">
+              Most studios or gyms run out of first aid materials and waste time
+              restocking. Order our bundles in bulk and subscribe to our
+              replenishment services.
+            </p>
+          </div>
         </div>
-        <div style="flex:1; display:flex; flex-direction:column; align-items:center; text-align:center; gap:16px;">
-          <img src="images/brokenBoneIMG.png" style="width:50px; height:50px;">
-          <p style="flex:1;">Injuries can ruin a career. The wrong kit only makes things worse. Career-Path Bundles focuses on the people behind the bandages.</p>
-        </div>
-        <div style="flex:1; display:flex; flex-direction:column; align-items:center; text-align:center; gap:16px;">
-          <img src="images/medkitIMG.png" style="width:50px; height:50px;">
-          <p style="flex:1;">Most studios or gyms run out of first aid materials and waste time restocking. Order our bundles in bulk and subscribe to our replenishment services.</p>
-        </div>
-      </div>  
+      </div>
     </div>
-    </div>
-    <img src='images/aboutIMG.png' style="width:100%; height: 300px; object-fit: cover;">
+    <img
+      src="images/aboutIMG.png"
+      style="width: 100%; height: 300px; object-fit: cover"
+    />
     <footer>
-        <div class="footer-section">
+      <div class="footer-section">
+        <div class="footer-bottom">
+          <p>
+            &copy; 2026 Workwear Wraps. All rights reserved. |
+            <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+          </p>
+        </div>
+      </div>
     </footer>
+    <script>
+      let getHamburger = document.querySelector("#toggleBar");
+      getHamburger.addEventListener("click", function () {
+        document.querySelector(".nav-links").classList.toggle("hamburger");
+      });
+    </script>
   </body>
 </html>
