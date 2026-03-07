@@ -61,6 +61,13 @@
             gap: 24px;
         }
 
+        #reviews h1 {
+            color: rgb(255, 255, 255);
+            font-family: "IM FELL French Canon", serif;
+            font-size: 36px;
+            font-weight: 400;
+        }
+
         .review-box {
             width: 100%;
             font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -82,11 +89,21 @@
             cursor: pointer
         }
 
+        #blurb-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
         @media (max-width: 768px) {
             #reviews-container {
                 display: flex;
                 flex-direction: column;
                 gap: 10px;
+            }
+
+            #blurb-container {
+                text-align: center;
             }
         }
 
@@ -125,13 +142,28 @@
             </ul>
         </div>
     </nav>
+    <section id="reviews">
+        <h1>Reviews</h1>
+        <div id="rating-stats">
+        </div>
+        <div id="reviews-container">
+
+        </div>
+    </section>
 
     <div class="page-container">
         <div class="columns">
-            <div>
-                <h1>Reviews</h1>
-                <p>Had an experience with one of our kits? Leave a review expressing your opinions.
-                    We'd love to hear about and your feedback helps us continue to build better.</p>
+            <div id="blurb-container">
+                <h2>We'd Love Your Feedback!</h2>
+                <p>Standard first aid kits are built for boxes; ours are built for
+                    the work you do. Because we are constantly iterating on our
+                    designs to better serve your specific industry, your real-world
+                    feedback is vital.</p>
+
+                <p>Have you used one of our kits in the field? Let us know how it
+                    held up. Your reviews help us refine our adhesives, optimize
+                    our layouts, and ensure that when you reach for a kit, you
+                    get exactly what you need, exactly when you need it.</p>
             </div>
             <div class="form-container">
                 <h2>Write a Review</h2>
@@ -154,14 +186,6 @@
             </div>
         </div>
     </div>
-    <section id="reviews">
-        <h2>Customer Testimonials</h2>
-        <div id="rating-stats">
-        </div>
-        <div id="reviews-container">
-
-        </div>
-    </section>
 
     <footer>
         <div class="footer-section">
