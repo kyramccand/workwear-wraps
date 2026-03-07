@@ -71,6 +71,7 @@
 
       .about-section > div {
         flex-direction: column !important;
+        width: 80%;
         padding: 24px 20px !important;
         gap: 32px !important;
       }
@@ -122,14 +123,22 @@
       <p class="p">
         We started Career-Path Bundles after noticing how limited current first
         aid kits are. The same materials won't work for the same professions or
-        people. An artist, doctor, patient, or athlete don’t have the same needs
-        or challenges. We don’t believe in the one-size-fits-all narrative in
+        people. An artist, doctor, patient, or athlete don't have the same needs
+        or challenges. We don't believe in the one-size-fits-all narrative in
         this industry, so we built recovery kits built for you.
       </p>
       <div class="about-section">
         <div
-          style="display: flex; gap: 48px; padding: 48px 80px; margin: 0 auto"
-        >
+          style="
+              display: flex; 
+              gap: 48px; 
+              padding: 48px 80px; 
+              margin: 0 auto; 
+              justify-content: space-around;
+              width: 90%;          /* Let it fill most of the screen */
+              max-width: 1000px;   /* But don't let it get wider than this */
+            "
+            >
           <div
             style="
               flex: 1;
