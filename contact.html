@@ -8,6 +8,16 @@
   </head>
 
   <body>
+    <script>
+      function checkValid() {
+        if (document.querySelector("input[name="name"]").value == "")) {
+          alert("Please fill out the name form.");
+        } else {
+          alert("Thank you for taking the time to reach out!");
+        }
+      }
+    </script>
+    
     <header class="header">
       <div class="header-container"></div>
       <style>
@@ -76,7 +86,7 @@
         </p>
 
         <div class="form-container">
-          <form>
+          <form onSubmit="checkValid()">
               <label for="name">Name*</label>
               <input type="name" name="name" required>
               <label for="email">Email*</label>
