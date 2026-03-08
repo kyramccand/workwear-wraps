@@ -10,19 +10,19 @@
   <body>
     <script>
       function checkValid() {
-        if (document.querySelector("input[name="name"]").value == "") {
+        if (document.querySelector('input[name="name"]').value == "") {
           alert("Please provide your name before submitting.");
           return false;
-        } else if (document.querySelector("input[name="email"]").value == "") {
+        } else if (document.querySelector('input[name="email"]').value == "") {
           alert("Please provide your email before submitting.");
           return false;
-        } else if (document.querySelector("input[name="age"]").value == "") {
+        } else if (document.querySelector('input[name="age"]').value == "") {
           alert("Please provide your age before submitting.");
           return false;
-        } else if (document.querySelector("input[name="profession"]").value == "") {
+        } else if (document.querySelector('input[name="profession"]').value == "") {
           alert("Please provide your profession before submitting.");
           return false;
-        } else if (document.querySelector("input[name="feedback"]").value == "") {
+        } else if (document.querySelector('input[name="feedback"]').value == "") {
           alert("Please fill this out to let us know your question or concern before submitting.");
           return false;
         } else {
@@ -107,7 +107,7 @@
               <input type="email" name="email">
               <label for="phone-num">Phone number</label>
               <input type="tel" name="phone-num">
-              <label for="age">Age</label>
+              <label for="age">Age*</label>
               <input type="number" name="age">
               <label for="profession">Profession*</label>
               <input type="text" name="profession">
