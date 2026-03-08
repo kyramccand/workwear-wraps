@@ -168,7 +168,7 @@ section#home {
   padding-top: 30px;
   margin: 0 auto;
   background:
-    linear-gradient(to right, #647d69, transparent),
+    linear-gradient(to right, #647d69 50%, transparent),
     url("./images/compressed_jason-leung-BXAnnFhEs4o-unsplash.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -499,7 +499,7 @@ footer {
 
   .container {
     background:
-      linear-gradient(to bottom, #647d69, transparent),
+      linear-gradient(to bottom, #647d69 50%, transparent),
       url("./images/compressed_jason-leung-BXAnnFhEs4o-unsplash.jpg");
     display: flex;
     padding: 30px;
