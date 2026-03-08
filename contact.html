@@ -10,11 +10,7 @@
   <body>
     <script>
       function checkValid() {
-        if (document.querySelector("input[name="name"]").value == "")) {
-          alert("Please fill out the name form.");
-        } else {
-          alert("Thank you for taking the time to reach out!");
-        }
+        alert("Thank you for providing feedback!");
       }
     </script>
     
@@ -94,10 +90,10 @@
               <label for="phone-num">Phone number</label>
               <input type="tel" name="phone-num">
               <label for="age">Age*</label>
-              <input type="number" name="age" requred>
+              <input type="number" name="age" required>
               <label for="profession">Profession*</label>
               <input type="text" name="profession" required>
-              <input type="text" id="feedback" name="feedback" placeholder="Let us know what you're thinking here!"><br>
+              <input type="text" id="feedback" name="feedback" placeholder="Let us know what you're thinking here!" required><br>
               <input type="submit" value="Submit" class="submitButton">
           </form>
         </div>
