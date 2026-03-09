@@ -20,14 +20,26 @@
                 </svg>
                 Workwear Wraps
             </a>
+        <span class="circle">
+          <h1 style="color: var(--green)" id="toggleBar">☰</h1>
+        </span>
         <ul class="nav-links">
-          <ul class="nav-links">
-            <li><a href="about.html">About</a></li>
-            <li><a href="products.html">Products</a></li>
-            <li><a href="reviews.html">Reviews</a></li>
-            <li><a href="resources.html">FAQs</a></li>
-            <li><a href="contact.html"><button class="button">Contact</button></a></li>
-        </ul>
+    <li><a href="about.html">About</a></li>
+    <li><a href="products.html">Products</a></li>
+    <li class="dropdown">
+        <button id="resourcesBtn">
+            Resources
+            <i class="fa-solid fa-angle-down"></i>
+        </button>
+        <div class="dropdownOptions">
+            <a href="reviews.html">Reviews</a>
+            <a href="resources.html">FAQs</a>
+        </div>
+    </li>
+    <li>
+      <a href="contact.html"><button class="button">Contact</button></a>
+    </li>
+    </ul>
       </div>
     </nav>
 
@@ -36,8 +48,26 @@
     </div>
 
     <footer>
-        <div class="footer-section">
+      <div class="footer-section">
+        <div class="footer-bottom">
+          <p>
+            &copy; 2026 Workwear Wraps. All rights reserved. |
+            <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+          </p>
         </div>
+      </div>
     </footer>
+    <script>
+      let getHamburger = document.querySelector("#toggleBar");
+      getHamburger.addEventListener("click", function () {
+        document.querySelector(".nav-links").classList.toggle("hamburger");
+      });
+
+      let resources = document.querySelector("#resourcesBtn");
+      resources.addEventListener("click", function (e) {
+        e.stopPropagation();
+        document.querySelector(".dropdownOptions").classList.toggle("open");
+      });
+    </script>
   </body>
 </html>
