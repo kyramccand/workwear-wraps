@@ -183,7 +183,7 @@ section#home {
   padding-top: 30px;
   margin: 0 auto;
   background:
-    linear-gradient(to right, #647d69 50%, transparent),
+    linear-gradient(to right, #647d69e9 50%, transparent),
     url("./images/compressed_jason-leung-BXAnnFhEs4o-unsplash.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -206,7 +206,6 @@ section#home {
 .container p {
   width: 50%;
   font-size: 16px;
-  display: flex;
   font-family:
     "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
@@ -359,7 +358,7 @@ h2 {
   color: var(--dark);
   font-weight: 400;
   letter-spacing: 1px;
-  position: relative;
+  /* position: relative; */
   /* padding-bottom: 1.5rem; */
 }
 
@@ -504,9 +503,10 @@ footer {
 
   .container {
     background:
-      linear-gradient(to bottom, #647d69 50%, transparent),
+      linear-gradient(to bottom, #647d69e9 50%, transparent),
       url("./images/compressed_jason-leung-BXAnnFhEs4o-unsplash.jpg");
     display: flex;
+    text-align: center;
     padding: 30px;
     align-items: center;
     background-repeat: no-repeat;
@@ -531,6 +531,23 @@ footer {
     align-items: center;
     gap: 8px;
   }
+
+  h1 {
+  font-size: 32px !important;
+  }
+
+  h2 {
+    font-size: 24px !important;
+  }
+
+  h3 {
+    font-size: 20px !important;
+  }
+
+  p {
+    font-size: 14px !important;
+  }
+
 }
 
 /* Basically for anything NOT on mobile, so no circle should show */
