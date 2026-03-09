@@ -21,6 +21,22 @@ body {
   --sandidk: #d4d1c9;
 }
 
+h1 {
+  font-size: 40px !important;
+}
+
+h2 {
+  font-size: 32px !important;
+}
+
+h3 {
+  font-size: 24px !important;
+}
+
+p {
+  font-size: 16px !important;
+}
+
 .button,
 form input[type="submit"] {
   width: 80px;
