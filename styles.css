@@ -428,8 +428,9 @@ p {
 
 .answer {
   display: none;
-  padding: 5px;
-  background: white;
+  padding: 15px;
+  background: lightgrey;
+  color: black;
 }
 
 .answer.show {
