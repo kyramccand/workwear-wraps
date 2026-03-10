@@ -10,7 +10,6 @@
             body{
                 background-color: #E5F4E9;
             }
-
             .page-container {
                 display: flex;
                 flex-direction: column;
@@ -19,11 +18,8 @@
                 background-size: cover;
                 background-position: center;
                 padding: 48px 40px;
-                max-width: 100%;
-                margin: 0;
-                border-radius: 0;
+        
             }
-
             .page-container h1 {
                 color: #ffffff;
                 font-size: 60px;
@@ -34,32 +30,113 @@
                 font-size: 15px;
                 max-width: 50%;
             }
-
-            .details {
-                background-color: #ffffff;
-                text-align: center;
-                border-radius: 0px;
-                padding: 40px;
-                display: grid;
-                grid-template-columns: 1fr 1fr 1fr;
-                gap: 40px;
-                
+        
+            .section {
+                padding: 60px;
+                background-color: #E5F4E9;
             }
-            .details h2 {
+            .section.white { 
+                background-color: #ffffff; 
+            }
+
+            .section h2 {
                 font-size: 32px;
                 font-weight: normal;
-                margin-bottom: 16px;
+                margin-bottom: 8px;
             }
-            .details ul {
-                font-size: 20px;
-                line-height: 3;
-                display: inline-block;
-                text-align: left;
+
+            .who-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                gap: 16px;
             }
-            .column {
+            .who-grid span {
+                background-color: #ffffff;
+                border-left: 4px solid #647D69;
+                border-radius: 8px;
+                padding: 20px 16px;
+                font-size: 15px;
+                text-align: center;
+            }
+
+            .why-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+                margin-bottom: 32px;
+            }
+            .why-card {
+                background-color: #ffffff;
+                border-radius: 10px;
+                padding: 24px;
+                display: flex;
+                align-items: center;
+                gap: 16px;
+            }
+            .why-card .icon {
+                width: 40px;
+                height: 40px;
+                flex-shrink: 0;
+                background-color: #E5F4E9;
+                border-radius: 8px;
+            }
+            .why-card p { 
+                font-size: 15px; 
+                color: #333; 
+                line-height: 1.5; 
+            }
+
+            .why-list {
+                padding-left: 24px;
                 display: flex;
                 flex-direction: column;
-                align-items: center;
+                gap: 10px;
+            }
+            .why-list li { 
+                font-size: 18px; 
+                color: #2d3e2e; 
+                line-height: 1.6; 
+            }
+            
+            .intro {
+                background-color: #E5F4E9;
+                padding: 36px 60px;
+                text-align: center;
+            }
+
+            .intro p {
+                font-size: 17px;
+                color: #2d3e2e;
+                max-width: 700px;
+                margin: 0 auto;
+                line-height: 1.8;
+            }
+            .section-divider {
+                width: 40px;
+                height: 2px;
+                background-color: #647D69;
+                margin: 0 auto 20px;
+            }
+            .pricing-table {
+                width: 100%;
+                font-size: 15px;
+                border-collapse: collapse;
+            }
+
+            .pricing-table th {
+                background-color: #647D69;
+                color: #ffffff;
+                padding: 12px 16px;
+                text-align: left;
+                font-weight: normal;
+            }
+
+            .pricing-table td {
+                padding: 12px 16px;
+                border-bottom: 1px solid #E5F4E9;
+                color: #2d3e2e;
+                text-align: left;
+                background-color: #ffffff;
             }
         </style>
     </head>
@@ -107,34 +184,77 @@
         all mediums through waterproof, durable protection while at work. </p>
     </div>
 
-    <div class="details">
-      <div class="column">
-        <h2>Profession</h2>
-        <ul>
-          <li>Sculpters</li>
-          <li>Mixed Media Artists</li>
-          <li>Painters</li>
-          <li>Printmakers</li>
-        </ul>
-      </div>
-      <div class="column">
-        <h2>Qualities</h2>
-        <ul>
-          <li>Non-staining materials</li>
-          <li>Abrasion protection</li>
-          <li>Waterproof seals</li>
-        </ul>
-      </div>
-      <div class="column">
-        <h2>Pricing</h2>
-        <ul>
-          <li>Artist Kit – $35</li>
-          <li>Studio Bundle – $100</li>
-          <li>Monthly Restock – $25</li>
-          <li>B2B Studio Plan</li>
-        </ul>
-      </div>
+    <div class="intro">
+  <p>The studio is a demanding place. The Visual Arts Kit is built to keep you 
+    creating by protecting your hands, skin, and focus from the harsh reality 
+    of working with mixed media.</p>
+</div>
+
+<div class="section">
+  <h2>Pricing</h2>
+  <div class="section-divider"></div>
+  <table class="pricing-table">
+    <tr>
+      <th>Plan</th>
+      <th>Price</th>
+    </tr>
+    <tr>
+      <td>Artist Kit</td>
+      <td>$35</td>
+    </tr>
+    <tr>
+      <td>Studio Bundle</td>
+      <td>$100</td>
+    </tr>
+    <tr>
+      <td>Monthly Restock</td>
+      <td>$25</td>
+    </tr>
+    <tr>
+      <td>B2B Studio Plan</td>
+      <td>Contact us</td>
+    </tr>
+  </table>
+</div>
+
+<div class="section">
+  <h2>Made For</h2>
+  <div class="section-divider"></div>
+  <div class="who-grid">
+    <span>Sculptors</span>
+    <span>Mixed Media Artists</span>
+    <span>Painters</span>
+    <span>Printmakers</span>
+  </div>
+</div>
+
+<div class="section">
+  <h2>Why Workwear Wraps?</h2>
+  <div class="section-divider"></div>
+  <div class="why-grid">
+    <div class="why-card">
+      <img src="images/hammer-icon.webp" class="icon">
+      <p>Non-staining materials that won't affect your work</p>
     </div>
+    <div class="why-card">
+      <img src="images/sewing-thread-icon.png" class="icon">
+      <p>Abrasion protection for hands working with rough surfaces</p>
+    </div>
+    <div class="why-card">
+      <img src="images/paint-palette-icon.png" class="icon">
+      <p>Waterproof seals that hold up against paint and chemicals</p>
+    </div>
+    <div class="why-card">
+      <img src="images/band-bandage-icon.webp" class="icon">
+      <p>Flexible coverage that doesn't get in the way of your craft</p>
+    </div>
+  </div>
+  <ul class="why-list">
+    <li>Latex-free options for sensitive skin</li>
+    <li>Compact kit fits in any studio drawer or supply bag</li>
+    <li>Designed with artists and studio instructors in mind</li>
+  </ul>
+</div>
 
 <footer>
       <div class="footer-section">
