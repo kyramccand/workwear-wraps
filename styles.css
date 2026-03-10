@@ -427,6 +427,8 @@ p {
 
 .answer {
   display: none;
+  padding: 5px;
+  background: white;
 }
 
 .answer.show {
