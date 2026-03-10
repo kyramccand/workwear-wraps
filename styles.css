@@ -401,6 +401,9 @@ p {
 
 .FAQs p {
   color: #000000;
+  font-family:
+    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 .FAQs button {
