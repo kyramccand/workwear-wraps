@@ -26,28 +26,8 @@
           alert("Please fill this out to let us know your question or concern before submitting.");
           return false;
         } else {
-          let email = document.querySelector('input[name="email"]').value;
-          let atIndex = 0;
-          let periodIndex = 0;
-
-          for (let i = 0; i < email.length; i++) {
-            if (email[i] == "@") {
-              atIndex = i;
-            }
-
-            if (email[i] == ".") {
-              periodIndex = i;
-            }
-          }
-
-          if (email.indexOf("@") !== -1 && email.indexOf(".") !== -1 && periodIndex > atIndex) {
-            alert("Thank you for reaching out to us!");
-            return true
-          }
-
-          alert("Please provide a valid email address.");
-          return false;
-        }
+          alert("Thank you for reaching out to us!");
+          return true;
       }
     </script>
     
