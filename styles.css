@@ -451,6 +451,10 @@ footer {
   margin-top: 0;
 }
 
+footer a {
+  text-decoration: underline;
+}
+
 .footer-bottom {
   text-align: center;
   padding-top:  5px;
