@@ -54,6 +54,12 @@ form input[type="submit"] {
   padding: 0px;
 }
 
+textarea {
+  width: 100%;
+  padding: 10px;
+  min-height: 120px;
+}
+
 .button:hover,
 form input[type="submit"]:hover {
   background-color: var(--drkgreen);
