@@ -26,7 +26,7 @@
         } else if (document.querySelector('input[name="profession"]').value == "") {
           alert("Please provide your profession before submitting.");
           return false;
-        } else if (document.querySelector('input[name="feedback"]').value == "") {
+        } else if (document.querySelector('textarea[name="feedback"]').value == "") {
           alert("Please fill this out to let us know your question or concern before submitting.");
           return false;
         } else {
@@ -118,7 +118,7 @@
               <label for="profession">Profession*</label>
               <input type="text" name="profession">
               <label for="feedback">Your Message*</label>
-              <input type="text" id="feedback" name="feedback" placeholder="Let us know what you're thinking here!"><br>
+              <textarea id="feedback" name="feedback" placeholder="Let us know what you're thinking here!"></textarea><br>
               <label for="subscribe">Subscribe to stay in the loop for sales and other notifications from us?</label>
               <input type="checkbox" id="subscribe" name="subscribe">
               <input type="submit" value="Submit" class="submitButton">
